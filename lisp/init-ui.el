@@ -23,6 +23,7 @@
 (if (not (eq 'window-system nil))
     (use-package dracula-theme
       :config
+      (setq dracula-alternate-mode-line-and-minibuffer t)
       (load-theme 'dracula t)))
 
 ;; show line number

@@ -7,9 +7,10 @@
   (add-to-list 'load-path "~/.emacs.d/lisp/")
   ;; set tencent mirrorrs
   (setq package-archives
-        '(("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-          ("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-          ("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
+        '(("melpa" . "https://mirrors.cloud.tencent.com/elpa/melpa/")
+          ("gnu" . "https://mirrors.cloud.tencent.com/elpa/gnu/")
+          ("marmalade" . "https://mirrors.cloud.tencent.com/elpa/marmalade/")
+          ("org" . "https://mirrors.cloud.tencent.com/elpa/org/")))
   ;; use-package
   (condition-case nil
       (require 'use-package)
@@ -34,10 +35,10 @@
 ;; always ensure packages installed
 (setq use-package-always-ensure t)
 
-(setq url-proxy-services
-      '(("no_proxy" . "^\\(localhost\\|10\\..*\\|192\\.168\\..*\\)")
-	("http" . "127.0.0.1:8118")
-	("https" . "127.0.0.1:8118")))
+;;(setq url-proxy-services
+;;      '(("no_proxy" . "^\\(localhost\\|10\\..*\\|192\\.168\\..*\\)")
+;;	("http" . "127.0.0.1:8118")
+;;	("https" . "127.0.0.1:8118")))
 
 ;;(setq url-gateway-method 'socks)
 ;;(setq socks-server '("Default server" "127.0.0.1" 1080 5))
@@ -55,8 +56,6 @@
 
 ;; tools
 (require 'init-which-key)
-(require 'init-company)
-(require 'init-flycheck)
 (require 'init-counsel)
 (require 'init-yasnippet)
 (require 'init-smartparens)
@@ -66,3 +65,10 @@
 (require 'init-popwin)
 (require 'init-reveal-in-folder)
 (require 'init-window-numbering)
+(require 'init-neotree)
+
+;; program
+(require 'init-company)
+(require 'init-flycheck)
+(require 'init-projectile)
+(require 'init-magit)
