@@ -43,7 +43,6 @@
 	    (when (stringp sym)
 	      (regexp-quote sym))))
 	regexp-history)
-  (call-interactively 'occur)
-  )
+  (call-interactively 'occur))
 
 (provide 'init-better-defaults)

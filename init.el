@@ -12,13 +12,13 @@
           ("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
   ;; use-package
   (condition-case nil
-                  (require 'use-package)
-                  (file-error
-                    (package-refresh-contents)
-                    (package-initialize)
-                    (package-install 'use-package)
-                    (require 'use-package))
-                  )
+      (require 'use-package)
+    (file-error
+     (package-refresh-contents)
+     (package-initialize)
+     (package-install 'use-package)
+     (require 'use-package))
+    )
   )
 
 ;; open my config file
