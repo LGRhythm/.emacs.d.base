@@ -35,6 +35,7 @@
 ;; always ensure packages installed
 (setq use-package-always-ensure t)
 
+;; proxy
 ;;(setq url-proxy-services
 ;;      '(("no_proxy" . "^\\(localhost\\|10\\..*\\|192\\.168\\..*\\)")
 ;;	("http" . "127.0.0.1:8118")
@@ -67,7 +68,7 @@
 (require 'init-window-numbering)
 (require 'init-neotree)
 
-;; program
+;; develop
 (require 'init-company)
 (require 'init-flycheck)
 (require 'init-projectile)
